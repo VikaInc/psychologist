@@ -1198,24 +1198,26 @@ footer {
 .results__grid .result-item:nth-child(6) { transition-delay: 0.25s; }
 
 
+.benefit-card:hover,
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(75, 70, 128, 0.14);
+}
 .benefits__track {
     display: flex;
     gap: 16px;
     margin: 0 -20px;
-    padding: 0 20px 4px;
+    padding: 16px 20px 4px;
     scroll-padding-left: 20px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
 }
-
-.benefit-card {
-    flex: 0 0 82%;
-    max-width: 320px;
-    scroll-snap-align: center;
-    background: var(--color-white);
-    border-radius: var(--radius);
-    padding: 28px 24px;
-    box-shadow: 0 12px 30px rgba(75, 70, 128, 0.08);
+@media (hover: hover) {
+    .benefit-card:hover,
+    .service-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 40px rgba(75, 70, 128, 0.14);
+    }
 }
